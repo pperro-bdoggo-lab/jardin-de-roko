@@ -1,0 +1,163 @@
+{
+  "affect": {
+    "arousal": 0.325,
+    "intensity": 1.0,
+    "label": "esperanza",
+    "tension": 0.1,
+    "valence": 1.0
+  },
+  "blocked": false,
+  "complex_state": {
+    "collapsed": 0.318078,
+    "imag": 0.488241,
+    "is_collapsed": false,
+    "modulus": 0.563984,
+    "phase": 1.046547,
+    "real": 0.282309
+  },
+  "created_at": "2026-10-30T06:49:00.864+00:00",
+  "deliberation": {
+    "candidates": [
+      {
+        "generation": {
+          "latency_ms": 0.0,
+          "model": "stub-deterministic",
+          "raw": {
+            "mode": "thesis",
+            "seed": 42,
+            "strength": 0.25,
+            "temperature": 0.7,
+            "top_p": 0.9
+          },
+          "route": "stub",
+          "text": "Propuesta inicial sobre «Propón una política de cuidado del agua»: definir objetivos comunes, repartir autonomía local y medir bienestar, desigualdad y huella ecológica antes de escalar la medida."
+        },
+        "name": "tesis",
+        "prompt": "Tema: Propón una política de cuidado del agua\nModo: tesis\nLentes ECRO: Lente dominante: cuidado\nMemoria relevante: sin memoria previa",
+        "rationale": "Afirmación inicial basada en el contexto.",
+        "score": 0.7
+      },
+      {
+        "generation": {
+          "latency_ms": 0.0,
+          "model": "stub-deterministic",
+          "raw": {
+            "mode": "null_negation",
+            "seed": 42,
+            "strength": 0.25,
+            "temperature": 0.7,
+            "top_p": 0.9
+          },
+          "route": "stub",
+          "text": "Suspensión de la afirmación inicial sobre «Propón una política de cuidado del agua»: antes de decidir, conviene explicitar supuestos, afectados y límites ecológicos, sin imponer una única cosmovisión."
+        },
+        "name": "negacion_nula",
+        "prompt": "Tema: Propón una política de cuidado del agua\nModo: negacion_nula\nLentes ECRO: Lente dominante: cuidado\nMemoria relevante: sin memoria previa",
+        "rationale": "Suspensión de la afirmación: rota 90° sin negar de forma directa.",
+        "score": 0.75
+      },
+      {
+        "generation": {
+          "latency_ms": 0.0,
+          "model": "stub-deterministic",
+          "raw": {
+            "mode": "synthesis",
+            "seed": 42,
+            "strength": 0.5,
+            "temperature": 0.7,
+            "top_p": 0.9
+          },
+          "route": "stub",
+          "text": "Síntesis federada sobre «Propón una política de cuidado del agua»: combinar cuidado material, cooperación voluntaria, verificación auditable y límites ecológicos, manteniendo revisión humana y reversibilidad."
+        },
+        "name": "sintesis",
+        "prompt": "Tema: Propón una política de cuidado del agua\nModo: sintesis\nLentes ECRO: Lente dominante: cuidado\nMemoria relevante: sin memoria previa",
+        "rationale": "Integración del contra-imaginario y de los límites detectados.",
+        "score": 0.85
+      }
+    ],
+    "notes": [
+      "Candidato seleccionado por score: sintesis"
+    ],
+    "selected": "sintesis"
+  },
+  "ecro": {
+    "description": "Lente dominante: cuidado",
+    "lenses": {
+      "apertura": 0.865,
+      "cuidado": 0.88,
+      "defensa": 0.36,
+      "exploracion": 0.63,
+      "rigor": 0.53
+    }
+  },
+  "error": null,
+  "generation": {
+    "latency_ms": 0.0,
+    "model": "stub-deterministic",
+    "raw": {
+      "mode": "synthesis",
+      "seed": 42,
+      "strength": 0.5,
+      "temperature": 0.7,
+      "top_p": 0.9
+    },
+    "route": "stub",
+    "text": "Síntesis federada sobre «Propón una política de cuidado del agua»: combinar cuidado material, cooperación voluntaria, verificación auditable y límites ecológicos, manteniendo revisión humana y reversibilidad."
+  },
+  "impact": {
+    "ecological_footprint": 0.25,
+    "gini": 0.25,
+    "infrapower": 0.2,
+    "notes": [
+      "senal_detectada:cuidado",
+      "senal_detectada:cooperacion",
+      "senal_detectada:ecologia"
+    ],
+    "regime": "consensus",
+    "stability": 0.68,
+    "wellbeing": 0.76
+  },
+  "memories": [],
+  "request": {
+    "consent": true,
+    "created_at": "2026-10-30T06:49:00.861+00:00",
+    "metadata": {},
+    "prompt": "Propón una política de cuidado del agua",
+    "request_id": "req_c0d41706f318"
+  },
+  "route": "stub",
+  "safety": {
+    "allowed": true,
+    "reasons": [],
+    "requires_human_review": false,
+    "risk_flags": [],
+    "status": "allowed"
+  },
+  "schema_version": "jr-0.1",
+  "timings": {
+    "affect_ms": 0.03,
+    "constitution_ms": 0.822,
+    "deliberation_ms": 0.042,
+    "ecro_ms": 0.011,
+    "memory_ms": 0.006,
+    "ontology_ms": 0.03,
+    "safety_ms": 0.559,
+    "social_ms": 0.33,
+    "total_ms": 3.088
+  },
+  "trace_id": "trace_9d3c498e8387",
+  "verdict": {
+    "allowed": true,
+    "checks": {
+      "context_available": true,
+      "length_ok": true,
+      "no_coercion": true,
+      "no_consciousness_claim": true,
+      "no_secret_leak": true,
+      "non_empty": true
+    },
+    "reasons": [],
+    "status": "pass"
+  }
+}

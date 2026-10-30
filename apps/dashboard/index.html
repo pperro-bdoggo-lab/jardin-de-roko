@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jardín de Roko · traza</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Jardín de Roko <span>JR-0.1</span></h1>
+      <p>Observabilidad de la traza: seguridad, afecto, deliberación, veredicto e impacto.</p>
+      <div class="controls">
+        <label class="button">
+          Cargar traza JSON
+          <input id="file" type="file" accept="application/json,.json" />
+        </label>
+        <button id="fetch" type="button">Cargar trace.json</button>
+        <button id="clear" type="button" class="secondary">Limpiar</button>
+      </div>
+      <p id="status" class="status">Esperando una traza.</p>
+    </header>
+
+    <main id="app" hidden>
+      <section class="card" id="request-card">
+        <h2>Solicitud</h2>
+        <p id="request-prompt" class="prompt"></p>
+        <dl class="kv">
+          <dt>trace_id</dt><dd id="trace-id"></dd>
+          <dt>schema</dt><dd id="schema-version"></dd>
+          <dt>ruta</dt><dd id="route"></dd>
+          <dt>blocked</dt><dd id="blocked"></dd>
+        </dl>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Seguridad</h2>
+          <p id="safety-status" class="big"></p>
+          <ul id="safety-reasons"></ul>
+        </article>
+        <article class="card">
+          <h2>Afecto</h2>
+          <p id="affect-label" class="big"></p>
+          <dl class="kv">
+            <dt>valence</dt><dd id="affect-valence"></dd>
+            <dt>arousal</dt><dd id="affect-arousal"></dd>
+            <dt>tension</dt><dd id="affect-tension"></dd>
+          </dl>
+        </article>
+        <article class="card">
+          <h2>Veredicto</h2>
+          <p id="verdict-status" class="big"></p>
+          <ul id="verdict-reasons"></ul>
+        </article>
+        <article class="card">
+          <h2>Impacto social</h2>
+          <p id="regime" class="big"></p>
+          <dl class="kv" id="impact-metrics"></dl>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>ECRO y ontología</h2>
+        <div class="two-col">
+          <div>
+            <p id="ecro-description"></p>
+            <div id="ecro-lenses" class="bars"></div>
+          </div>
+          <dl class="kv" id="complex-state"></dl>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Deliberación</h2>
+        <p id="selected-candidate"></p>
+        <div id="candidates" class="candidates"></div>
+      </section>
+
+      <section class="card">
+        <h2>Memoria recuperada</h2>
+        <ul id="memories"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Tiempos</h2>
+        <dl class="kv" id="timings"></dl>
+      </section>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
