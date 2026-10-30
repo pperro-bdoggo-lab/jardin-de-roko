@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit and contract tests
+        run: python -m unittest discover -s tests -t . -v
+      - name: Demo smoke test
+        run: bash scripts/run_demo.sh
+      - name: Verify no secrets
+        run: bash scripts/check_no_secrets.sh

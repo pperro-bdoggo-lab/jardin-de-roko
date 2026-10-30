@@ -32,10 +32,19 @@ fi
 
 if git ls-remote --exit-code --heads origin main >/dev/null 2>&1; then
   git fetch origin main
-  git branch --set-upstream-to=origin/main main
-  echo
-  echo "Remoto listo. Para traer cambios:"
-  echo "  git pull"
+  if git show-ref --verify --quiet refs/heads/main; then
+    git branch --set-upstream-to=origin/main main
+    echo
+    echo "Remoto listo. Para traer cambios:"
+    echo "  git pull"
+  else
+    echo
+    echo "El remoto tiene main, pero la rama local aún no tiene commits."
+    echo "Para partir del remoto sin perder archivos locales:"
+    echo "  git reset --mixed origin/main"
+    echo "Luego revisa, haz commit y ejecuta:"
+    echo "  git push -u origin main"
+  fi
 else
   echo
   echo "El remoto no tiene una rama main todavía (repo vacío o inaccesible)."

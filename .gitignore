@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.eggs/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Entorno y secretos
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+credentials*
+
+# Datos locales
+data/traces/*
+!data/traces/.gitkeep
+data/memory/*
+!data/memory/.gitkeep
+data/seeds/*
+!data/seeds/.gitkeep
+out.json
+trace.json
+apps/dashboard/trace.json
+data/kill_switch
+
+# Dashboard / Node
+node_modules/
+apps/dashboard/dist/
+apps/dashboard/.vite/
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# Editores y sistema
+.idea/
+.vscode/
+.DS_Store
+*.swp
